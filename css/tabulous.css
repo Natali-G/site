@@ -1,0 +1,116 @@
+
+/* Базовые стили вкладок(табов)  */
+#tabs,#tabs2,#tabs3,#tabs4,#tabs5 {
+	width: 1200px;
+	margin: 0 auto;
+	margin-bottom: 40px; /*отступ по нижнему краю в поле вкладки*/
+}
+#tabs ul,#tabs2 ul,#tabs3 ul,#tabs4 ul,#tabs5 ul { /*основное поле прикрепляеся к вкладкам*/
+    margin-left:-90px;  /*отступ от края - вкладки, изменить чтобы была подстройка под разрешение экрана*/
+	margin-bottom: 0px;
+} 
+
+#tabs li,#tabs2 li,#tabs3 li,#tabs4 li,#tabs5 li { /*горизонтальные вкладки */
+	float: left;
+	margin-right: 2px; /*растояние между вкладками*/
+	list-style:none;
+} 
+
+#tabs li a,#tabs2 li a,#tabs3 li a,#tabs4 li a,#tabs5 li a { /*стиль вкладок*/
+	display: block;
+	padding: 17px 18px; /*ширина вкладок*/
+	background: #3e97dd;
+	text-decoration: none;
+	color: #f5fafd;    /*цвет текста во вкладках*/
+} 
+
+
+#tabs_container {
+	margin-right: 40px;  /*отступ от правого края*/
+	margin-left: -50px;  /*отступ от левого края*/
+	padding: 100px;
+	overflow: hidden;
+	position: relative;
+	background: white;
+}
+
+#tabs_container div { 
+	margin-right: 20px; /*отступ по нижнему краю от текста*/ 
+}
+/* параграфы содержания табов */
+p {	font-weight: 400;
+	font-size: 1em;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	line-height: 1.5;  /*расстояние между строками*/
+	margin-bottom: 10px;
+}
+
+/* убираем выделение ссылок пунктирной рамкой в FF и IE */
+a:active,a:focus {
+	outline: expression(hideFocus='true');
+}
+/* Эффекты для табов */
+.transition {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+
+	-webkit-transition-delay: .3s;
+	-moz-transition-delay: .3s;
+	-o-transition-delay: .3s;
+	-ms-transition-delay: .3s;
+	transition-delay: .3s;
+}
+
+.make_transist {
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.hidescale {
+	-webkit-transform: scale(0.9);
+	-moz-transform: scale(0.9);
+	-o-transform: scale(0.9);
+	-ms-transform: scale(0.9);
+	transform: scale(0.9);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	filter: alpha(opacity=0);
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+
+.showscale {
+	-webkit-transform: scale(1);
+	-moz-transform: scale(1);
+	-o-transform: scale(1);
+	-ms-transform: scale(1);
+	transform: scale(1);
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+
+	-webkit-transition-delay: .3s;
+	-moz-transition-delay: .3s;
+	-o-transition-delay: .3s;
+	-ms-transition-delay: .3s;
+	transition-delay: .3s;
+}
+
+
+.tabulous_active {
+	background: white !important;
+	color: #655c89 !important;
+}
+
+.tabulousclear {
+	display: block;
+	clear: both;
+}
+
